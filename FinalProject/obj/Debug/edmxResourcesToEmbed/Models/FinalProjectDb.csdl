@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinalProjectDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="T_ErrorLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Source" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Method" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ErrorOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Message" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StackTrace" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OTP_Details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OTP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GeneratedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ValidTill" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="T_Users" Relationship="Self.FK_T_OTP_Details_ToTable" FromRole="T_OTP_Details" ToRole="T_Users" />
+  </EntityType>
+  <EntityType Name="T_PasswordHistoryLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OldPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NewPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T_Users" Relationship="Self.FK_T_PasswordHistoryLog_ToTable" FromRole="T_PasswordHistoryLog" ToRole="T_Users" />
+  </EntityType>
+  <EntityType Name="T_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="T_Users" Relationship="Self.FK_T_Users_ToTable" FromRole="T_Roles" ToRole="T_Users" />
+  </EntityType>
+  <EntityType Name="T_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailId" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsOnline" Type="Boolean" Nullable="false" />
+    <Property Name="IsLocked" Type="Boolean" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_OTP_Details" Relationship="Self.FK_T_OTP_Details_ToTable" FromRole="T_Users" ToRole="T_OTP_Details" />
+    <NavigationProperty Name="T_PasswordHistoryLog" Relationship="Self.FK_T_PasswordHistoryLog_ToTable" FromRole="T_Users" ToRole="T_PasswordHistoryLog" />
+    <NavigationProperty Name="T_Roles" Relationship="Self.FK_T_Users_ToTable" FromRole="T_Users" ToRole="T_Roles" />
+    <NavigationProperty Name="T_Address" Relationship="FinalProjectDbModel.FK_T_Address_ToTable" FromRole="T_Users" ToRole="T_Address" />
+    <NavigationProperty Name="T_Comments" Relationship="FinalProjectDbModel.FK_T_Comments_ToTable" FromRole="T_Users" ToRole="T_Comments" />
+    <NavigationProperty Name="T_Orders" Relationship="FinalProjectDbModel.FK_T_Orders_ToTable" FromRole="T_Users" ToRole="T_Orders" />
+    <NavigationProperty Name="T_Payments" Relationship="FinalProjectDbModel.FK_T_Payments_ToTable" FromRole="T_Users" ToRole="T_Payments" />
+    <NavigationProperty Name="T_ShoppingCart" Relationship="FinalProjectDbModel.FK_T_ShoppingCart_ToTable" FromRole="T_Users" ToRole="T_ShoppingCart" />
+  </EntityType>
+  <Association Name="FK_T_OTP_Details_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_OTP_Details" Type="Self.T_OTP_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_OTP_Details">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_PasswordHistoryLog_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_PasswordHistoryLog" Type="Self.T_PasswordHistoryLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_PasswordHistoryLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Users_ToTable">
+    <End Role="T_Roles" Type="Self.T_Roles" Multiplicity="1" />
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="T_Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FinalProjectDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="T_ErrorLogs" EntityType="Self.T_ErrorLogs" />
+    <EntitySet Name="T_OTP_Details" EntityType="Self.T_OTP_Details" />
+    <EntitySet Name="T_PasswordHistoryLog" EntityType="Self.T_PasswordHistoryLog" />
+    <EntitySet Name="T_Roles" EntityType="Self.T_Roles" />
+    <EntitySet Name="T_Users" EntityType="Self.T_Users" />
+    <AssociationSet Name="FK_T_OTP_Details_ToTable" Association="Self.FK_T_OTP_Details_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_OTP_Details" EntitySet="T_OTP_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_PasswordHistoryLog_ToTable" Association="Self.FK_T_PasswordHistoryLog_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_PasswordHistoryLog" EntitySet="T_PasswordHistoryLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Users_ToTable" Association="Self.FK_T_Users_ToTable">
+      <End Role="T_Roles" EntitySet="T_Roles" />
+      <End Role="T_Users" EntitySet="T_Users" />
+    </AssociationSet>
+    <EntitySet Name="T_Address" EntityType="FinalProjectDbModel.T_Address" />
+    <EntitySet Name="T_Category" EntityType="FinalProjectDbModel.T_Category" />
+    <EntitySet Name="T_Comments" EntityType="FinalProjectDbModel.T_Comments" />
+    <EntitySet Name="T_OrderDetails" EntityType="FinalProjectDbModel.T_OrderDetails" />
+    <EntitySet Name="T_Orders" EntityType="FinalProjectDbModel.T_Orders" />
+    <EntitySet Name="T_Payments" EntityType="FinalProjectDbModel.T_Payments" />
+    <EntitySet Name="T_PIN" EntityType="FinalProjectDbModel.T_PIN" />
+    <EntitySet Name="T_Products" EntityType="FinalProjectDbModel.T_Products" />
+    <EntitySet Name="T_ShoppingCart" EntityType="FinalProjectDbModel.T_ShoppingCart" />
+    <AssociationSet Name="FK_T_Address_ToTable" Association="FinalProjectDbModel.FK_T_Address_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Address" EntitySet="T_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Address_ToTable_1" Association="FinalProjectDbModel.FK_T_Address_ToTable_1">
+      <End Role="T_PIN" EntitySet="T_PIN" />
+      <End Role="T_Address" EntitySet="T_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Products_ToTable" Association="FinalProjectDbModel.FK_T_Products_ToTable">
+      <End Role="T_Category" EntitySet="T_Category" />
+      <End Role="T_Products" EntitySet="T_Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Comments_ToTable" Association="FinalProjectDbModel.FK_T_Comments_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Comments" EntitySet="T_Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Comments_ToTable_1" Association="FinalProjectDbModel.FK_T_Comments_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_Comments" EntitySet="T_Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_OrderDetails_ToTable" Association="FinalProjectDbModel.FK_T_OrderDetails_ToTable">
+      <End Role="T_Orders" EntitySet="T_Orders" />
+      <End Role="T_OrderDetails" EntitySet="T_OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_OrderDetails_ToTable_1" Association="FinalProjectDbModel.FK_T_OrderDetails_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_OrderDetails" EntitySet="T_OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Orders_ToTable" Association="FinalProjectDbModel.FK_T_Orders_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Orders" EntitySet="T_Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Payments_ToTable_1" Association="FinalProjectDbModel.FK_T_Payments_ToTable_1">
+      <End Role="T_Orders" EntitySet="T_Orders" />
+      <End Role="T_Payments" EntitySet="T_Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Payments_ToTable" Association="FinalProjectDbModel.FK_T_Payments_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Payments" EntitySet="T_Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_ShoppingCart_ToTable_1" Association="FinalProjectDbModel.FK_T_ShoppingCart_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_ShoppingCart" EntitySet="T_ShoppingCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_ShoppingCart_ToTable" Association="FinalProjectDbModel.FK_T_ShoppingCart_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_ShoppingCart" EntitySet="T_ShoppingCart" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="T_Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="AddressLine" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Landmark" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pincode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_Users" Relationship="FinalProjectDbModel.FK_T_Address_ToTable" FromRole="T_Address" ToRole="T_Users" />
+    <NavigationProperty Name="T_PIN" Relationship="FinalProjectDbModel.FK_T_Address_ToTable_1" FromRole="T_Address" ToRole="T_PIN" />
+  </EntityType>
+  <EntityType Name="T_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Category" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Products" Relationship="FinalProjectDbModel.FK_T_Products_ToTable" FromRole="T_Category" ToRole="T_Products" />
+  </EntityType>
+  <EntityType Name="T_Comments">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Rating" Type="Double" />
+    <NavigationProperty Name="T_Users" Relationship="FinalProjectDbModel.FK_T_Comments_ToTable" FromRole="T_Comments" ToRole="T_Users" />
+    <NavigationProperty Name="T_Products" Relationship="FinalProjectDbModel.FK_T_Comments_ToTable_1" FromRole="T_Comments" ToRole="T_Products" />
+  </EntityType>
+  <EntityType Name="T_OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderDetailsId" />
+    </Key>
+    <Property Name="OrderDetailsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Orders" Relationship="FinalProjectDbModel.FK_T_OrderDetails_ToTable" FromRole="T_OrderDetails" ToRole="T_Orders" />
+    <NavigationProperty Name="T_Products" Relationship="FinalProjectDbModel.FK_T_OrderDetails_ToTable_1" FromRole="T_OrderDetails" ToRole="T_Products" />
+  </EntityType>
+  <EntityType Name="T_Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OrderDelivaryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="T_OrderDetails" Relationship="FinalProjectDbModel.FK_T_OrderDetails_ToTable" FromRole="T_Orders" ToRole="T_OrderDetails" />
+    <NavigationProperty Name="T_Users" Relationship="FinalProjectDbModel.FK_T_Orders_ToTable" FromRole="T_Orders" ToRole="T_Users" />
+    <NavigationProperty Name="T_Payments" Relationship="FinalProjectDbModel.FK_T_Payments_ToTable_1" FromRole="T_Orders" ToRole="T_Payments" />
+  </EntityType>
+  <EntityType Name="T_Payments">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="PaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_Orders" Relationship="FinalProjectDbModel.FK_T_Payments_ToTable_1" FromRole="T_Payments" ToRole="T_Orders" />
+    <NavigationProperty Name="T_Users" Relationship="FinalProjectDbModel.FK_T_Payments_ToTable" FromRole="T_Payments" ToRole="T_Users" />
+  </EntityType>
+  <EntityType Name="T_PIN">
+    <Key>
+      <PropertyRef Name="Pincode" />
+    </Key>
+    <Property Name="Pincode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="T_Address" Relationship="FinalProjectDbModel.FK_T_Address_ToTable_1" FromRole="T_PIN" ToRole="T_Address" />
+  </EntityType>
+  <EntityType Name="T_Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Weight" Type="Double" Nullable="false" />
+    <Property Name="Availability" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="T_Category" Relationship="FinalProjectDbModel.FK_T_Products_ToTable" FromRole="T_Products" ToRole="T_Category" />
+    <NavigationProperty Name="T_Comments" Relationship="FinalProjectDbModel.FK_T_Comments_ToTable_1" FromRole="T_Products" ToRole="T_Comments" />
+    <NavigationProperty Name="T_OrderDetails" Relationship="FinalProjectDbModel.FK_T_OrderDetails_ToTable_1" FromRole="T_Products" ToRole="T_OrderDetails" />
+    <NavigationProperty Name="T_ShoppingCart" Relationship="FinalProjectDbModel.FK_T_ShoppingCart_ToTable_1" FromRole="T_Products" ToRole="T_ShoppingCart" />
+  </EntityType>
+  <EntityType Name="T_ShoppingCart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="T_Products" Relationship="FinalProjectDbModel.FK_T_ShoppingCart_ToTable_1" FromRole="T_ShoppingCart" ToRole="T_Products" />
+    <NavigationProperty Name="T_Users" Relationship="FinalProjectDbModel.FK_T_ShoppingCart_ToTable" FromRole="T_ShoppingCart" ToRole="T_Users" />
+    <Property Name="IsDelivered" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_T_Address_ToTable">
+    <End Type="FinalProjectDbModel.T_Users" Role="T_Users" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Address" Role="T_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Address">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Address_ToTable_1">
+    <End Type="FinalProjectDbModel.T_PIN" Role="T_PIN" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Address" Role="T_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PIN">
+        <PropertyRef Name="Pincode" />
+      </Principal>
+      <Dependent Role="T_Address">
+        <PropertyRef Name="Pincode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Products_ToTable">
+    <End Type="FinalProjectDbModel.T_Category" Role="T_Category" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Products" Role="T_Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="T_Products">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Comments_ToTable">
+    <End Type="FinalProjectDbModel.T_Users" Role="T_Users" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Comments" Role="T_Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Comments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Comments_ToTable_1">
+    <End Type="FinalProjectDbModel.T_Products" Role="T_Products" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Comments" Role="T_Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_Comments">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_OrderDetails_ToTable">
+    <End Type="FinalProjectDbModel.T_Orders" Role="T_Orders" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_OrderDetails" Role="T_OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="T_OrderDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_OrderDetails_ToTable_1">
+    <End Type="FinalProjectDbModel.T_Products" Role="T_Products" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_OrderDetails" Role="T_OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_OrderDetails">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Orders_ToTable">
+    <End Type="FinalProjectDbModel.T_Users" Role="T_Users" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Orders" Role="T_Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Payments_ToTable_1">
+    <End Type="FinalProjectDbModel.T_Orders" Role="T_Orders" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Payments" Role="T_Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="T_Payments">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Payments_ToTable">
+    <End Type="FinalProjectDbModel.T_Users" Role="T_Users" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_Payments" Role="T_Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Payments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_ShoppingCart_ToTable_1">
+    <End Type="FinalProjectDbModel.T_Products" Role="T_Products" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_ShoppingCart" Role="T_ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_ShoppingCart">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_ShoppingCart_ToTable">
+    <End Type="FinalProjectDbModel.T_Users" Role="T_Users" Multiplicity="1" />
+    <End Type="FinalProjectDbModel.T_ShoppingCart" Role="T_ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_ShoppingCart">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

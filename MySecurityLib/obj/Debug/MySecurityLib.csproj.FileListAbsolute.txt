@@ -1,0 +1,5 @@
+D:\Pradnya\workspace_msnet\Project_Solution\MySecurityLib\bin\Debug\MySecurityLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MySecurityLib\bin\Debug\MySecurityLib.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\MySecurityLib\obj\Debug\MySecurityLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MySecurityLib\obj\Debug\MySecurityLib.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\MySecurityLib\obj\Debug\MySecurityLib.csprojResolveAssemblyReference.cache

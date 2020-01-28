@@ -1,0 +1,8 @@
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\bin\Debug\TestingApp.exe.config
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\bin\Debug\TestingApp.exe
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\bin\Debug\TestingApp.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\bin\Debug\MyLoggerLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\bin\Debug\MyLoggerLib.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\obj\Debug\TestingApp.csprojResolveAssemblyReference.cache
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\obj\Debug\TestingApp.exe
+D:\Pradnya\workspace_msnet\Project_Solution\TestingApp\obj\Debug\TestingApp.pdb

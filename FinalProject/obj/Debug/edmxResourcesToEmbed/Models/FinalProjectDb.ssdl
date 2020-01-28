@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinalProjectDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Address">
+    <Key>
+      <PropertyRef Name="AddressId" />
+    </Key>
+    <Property Name="AddressId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="State" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="AddressLine" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Landmark" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pincode" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Comments">
+    <Key>
+      <PropertyRef Name="CommentId" />
+    </Key>
+    <Property Name="CommentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="250" />
+    <Property Name="Rating" Type="float" />
+  </EntityType>
+  <EntityType Name="T_ErrorLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Source" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Method" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ErrorOn" Type="datetime" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="StackTrace" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderDetailsId" />
+    </Key>
+    <Property Name="OrderDetailsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="OrderDelivaryDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_OTP_Details">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OTP" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="GeneratedOn" Type="datetime" Nullable="false" />
+    <Property Name="ValidTill" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_PasswordHistoryLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ChangedOn" Type="datetime" Nullable="false" />
+    <Property Name="OldPassword" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NewPassword" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Payments">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="PaymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_PIN">
+    <Key>
+      <PropertyRef Name="Pincode" />
+    </Key>
+    <Property Name="Pincode" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="City" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Weight" Type="float" Nullable="false" />
+    <Property Name="Availability" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_ShoppingCart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="IsDelivered" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmailId" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsOnline" Type="bit" Nullable="false" />
+    <Property Name="IsLocked" Type="bit" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_T_Address_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_Address" Type="Self.T_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Address">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Address_ToTable_1">
+    <End Role="T_PIN" Type="Self.T_PIN" Multiplicity="1" />
+    <End Role="T_Address" Type="Self.T_Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_PIN">
+        <PropertyRef Name="Pincode" />
+      </Principal>
+      <Dependent Role="T_Address">
+        <PropertyRef Name="Pincode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Comments_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_Comments" Type="Self.T_Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Comments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Comments_ToTable_1">
+    <End Role="T_Products" Type="Self.T_Products" Multiplicity="1" />
+    <End Role="T_Comments" Type="Self.T_Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_Comments">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_OrderDetails_ToTable">
+    <End Role="T_Orders" Type="Self.T_Orders" Multiplicity="1" />
+    <End Role="T_OrderDetails" Type="Self.T_OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="T_OrderDetails">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_OrderDetails_ToTable_1">
+    <End Role="T_Products" Type="Self.T_Products" Multiplicity="1" />
+    <End Role="T_OrderDetails" Type="Self.T_OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_OrderDetails">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Orders_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_Orders" Type="Self.T_Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Orders">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_OTP_Details_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_OTP_Details" Type="Self.T_OTP_Details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_OTP_Details">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_PasswordHistoryLog_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_PasswordHistoryLog" Type="Self.T_PasswordHistoryLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_PasswordHistoryLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Payments_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_Payments" Type="Self.T_Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_Payments">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Payments_ToTable_1">
+    <End Role="T_Orders" Type="Self.T_Orders" Multiplicity="1" />
+    <End Role="T_Payments" Type="Self.T_Payments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Orders">
+        <PropertyRef Name="OrderId" />
+      </Principal>
+      <Dependent Role="T_Payments">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Products_ToTable">
+    <End Role="T_Category" Type="Self.T_Category" Multiplicity="1" />
+    <End Role="T_Products" Type="Self.T_Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="T_Products">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_ShoppingCart_ToTable">
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="1" />
+    <End Role="T_ShoppingCart" Type="Self.T_ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="T_ShoppingCart">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_ShoppingCart_ToTable_1">
+    <End Role="T_Products" Type="Self.T_Products" Multiplicity="1" />
+    <End Role="T_ShoppingCart" Type="Self.T_ShoppingCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="T_ShoppingCart">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T_Users_ToTable">
+    <End Role="T_Roles" Type="Self.T_Roles" Multiplicity="1" />
+    <End Role="T_Users" Type="Self.T_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="T_Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FinalProjectDbModelStoreContainer">
+    <EntitySet Name="T_Address" EntityType="Self.T_Address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Category" EntityType="Self.T_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Comments" EntityType="Self.T_Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_ErrorLogs" EntityType="Self.T_ErrorLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_OrderDetails" EntityType="Self.T_OrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Orders" EntityType="Self.T_Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_OTP_Details" EntityType="Self.T_OTP_Details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PasswordHistoryLog" EntityType="Self.T_PasswordHistoryLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Payments" EntityType="Self.T_Payments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PIN" EntityType="Self.T_PIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Products" EntityType="Self.T_Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Roles" EntityType="Self.T_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_ShoppingCart" EntityType="Self.T_ShoppingCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Users" EntityType="Self.T_Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_T_Address_ToTable" Association="Self.FK_T_Address_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Address" EntitySet="T_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Address_ToTable_1" Association="Self.FK_T_Address_ToTable_1">
+      <End Role="T_PIN" EntitySet="T_PIN" />
+      <End Role="T_Address" EntitySet="T_Address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Comments_ToTable" Association="Self.FK_T_Comments_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Comments" EntitySet="T_Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Comments_ToTable_1" Association="Self.FK_T_Comments_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_Comments" EntitySet="T_Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_OrderDetails_ToTable" Association="Self.FK_T_OrderDetails_ToTable">
+      <End Role="T_Orders" EntitySet="T_Orders" />
+      <End Role="T_OrderDetails" EntitySet="T_OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_OrderDetails_ToTable_1" Association="Self.FK_T_OrderDetails_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_OrderDetails" EntitySet="T_OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Orders_ToTable" Association="Self.FK_T_Orders_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Orders" EntitySet="T_Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_OTP_Details_ToTable" Association="Self.FK_T_OTP_Details_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_OTP_Details" EntitySet="T_OTP_Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_PasswordHistoryLog_ToTable" Association="Self.FK_T_PasswordHistoryLog_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_PasswordHistoryLog" EntitySet="T_PasswordHistoryLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Payments_ToTable" Association="Self.FK_T_Payments_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_Payments" EntitySet="T_Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Payments_ToTable_1" Association="Self.FK_T_Payments_ToTable_1">
+      <End Role="T_Orders" EntitySet="T_Orders" />
+      <End Role="T_Payments" EntitySet="T_Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Products_ToTable" Association="Self.FK_T_Products_ToTable">
+      <End Role="T_Category" EntitySet="T_Category" />
+      <End Role="T_Products" EntitySet="T_Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_ShoppingCart_ToTable" Association="Self.FK_T_ShoppingCart_ToTable">
+      <End Role="T_Users" EntitySet="T_Users" />
+      <End Role="T_ShoppingCart" EntitySet="T_ShoppingCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_ShoppingCart_ToTable_1" Association="Self.FK_T_ShoppingCart_ToTable_1">
+      <End Role="T_Products" EntitySet="T_Products" />
+      <End Role="T_ShoppingCart" EntitySet="T_ShoppingCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_T_Users_ToTable" Association="Self.FK_T_Users_ToTable">
+      <End Role="T_Roles" EntitySet="T_Roles" />
+      <End Role="T_Users" EntitySet="T_Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

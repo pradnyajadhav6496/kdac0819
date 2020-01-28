@@ -1,0 +1,288 @@
+Logged at 25-Jan-20 12:24:49 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:24:49 PM : Getting Category Details
+Logged at 25-Jan-20 12:24:49 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:24:55 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:24:55 PM : Getting Category Details
+Logged at 25-Jan-20 12:24:55 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:24:55 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 12:24:55 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 12:25:33 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:25:33 PM : Getting Category Details
+Logged at 25-Jan-20 12:25:33 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:25:33 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 12:25:33 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 12:28:04 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:28:04 PM : Getting Category Details
+Logged at 25-Jan-20 12:28:04 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:28:04 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 12:28:04 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 12:28:11 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:28:12 PM : Getting Category Details
+Logged at 25-Jan-20 12:28:12 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:28:12 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 12:28:12 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 12:28:32 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 12:28:32 PM : Getting Category Details
+Logged at 25-Jan-20 12:28:32 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 12:28:32 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 12:28:32 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:04:42 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:04:44 PM : Getting Category Details
+Logged at 25-Jan-20 10:04:44 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:04:45 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:04:45 PM : Getting Category Details
+Logged at 25-Jan-20 10:04:45 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:05:07 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:05:07 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:05:07 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:05:18 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:05:18 PM : Getting Category Details
+Logged at 25-Jan-20 10:05:18 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:05:18 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:05:18 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:05:23 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:05:23 PM : Getting Category Details
+Logged at 25-Jan-20 10:05:23 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:05:53 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:05:53 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:06:06 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:06:24 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:06:24 PM : Getting Category Details
+Logged at 25-Jan-20 10:06:24 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:06:39 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:06:39 PM : Getting Category Details
+Logged at 25-Jan-20 10:06:43 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:07:01 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:07:01 PM : Getting Category Details
+Logged at 25-Jan-20 10:07:01 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:07:10 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:07:10 PM : Getting Category Details
+Logged at 25-Jan-20 10:07:10 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:07:10 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:07:11 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:07:42 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:07:42 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:07:42 PM : Getting Category Details
+Logged at 25-Jan-20 10:07:42 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:07:42 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:08:43 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:08:43 PM : Getting Category Details
+Logged at 25-Jan-20 10:08:50 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:08:56 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:08:57 PM : Getting Category Details
+Logged at 25-Jan-20 10:08:57 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:09:17 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:09:17 PM : Getting Category Details
+Logged at 25-Jan-20 10:09:17 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:09:17 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:09:17 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:10:24 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:10:24 PM : Getting Category Details
+Logged at 25-Jan-20 10:10:24 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:10:41 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:10:41 PM : Getting Category Details
+Logged at 25-Jan-20 10:10:41 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:11:22 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:11:22 PM : Getting Category Details
+Logged at 25-Jan-20 10:11:22 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:11:22 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:11:23 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:11:39 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:11:39 PM : Getting Category Details
+Logged at 25-Jan-20 10:11:39 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:11:39 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:11:39 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:12:57 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:12:57 PM : Getting Category Details
+Logged at 25-Jan-20 10:12:57 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:13:07 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:13:07 PM : Getting Category Details
+Logged at 25-Jan-20 10:13:07 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:13:14 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:13:14 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:13:14 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:13:23 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:13:23 PM : Getting Category Details
+Logged at 25-Jan-20 10:13:23 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:13:23 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:13:23 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:29:13 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:29:13 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:29:13 PM : Getting Category Details
+Logged at 25-Jan-20 10:29:13 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:29:33 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:29:34 PM : Getting Category Details
+Logged at 25-Jan-20 10:29:34 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:29:36 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:29:37 PM : Getting Category Details
+Logged at 25-Jan-20 10:29:37 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:29:45 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:29:45 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:29:45 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:30:05 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:30:05 PM : Getting Category Details
+Logged at 25-Jan-20 10:30:05 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:30:05 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:30:05 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:30:26 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:30:26 PM : Getting Category Details
+Logged at 25-Jan-20 10:30:26 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:30:26 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:30:26 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:39:50 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:39:54 PM : Getting Category Details
+Logged at 25-Jan-20 10:39:54 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:40:04 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:40:04 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:40:04 PM : Getting Category Details
+Logged at 25-Jan-20 10:40:11 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:40:18 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:40:19 PM : Getting Category Details
+Logged at 25-Jan-20 10:40:19 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:40:22 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:40:23 PM : Getting Category Details
+Logged at 25-Jan-20 10:40:23 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:40:31 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:40:31 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:40:31 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:40:40 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:40:40 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:40:40 PM : Getting Category Details
+Logged at 25-Jan-20 10:40:43 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:40:57 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:40:57 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:40:57 PM : Getting Category Details
+Logged at 25-Jan-20 10:40:57 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:41:15 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:41:15 PM : Getting Category Details
+Logged at 25-Jan-20 10:41:15 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:41:23 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:41:23 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:41:23 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:41:34 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:41:34 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:41:34 PM : Getting Category Details
+Logged at 25-Jan-20 10:41:37 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:42:17 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:42:17 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:42:18 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 25-Jan-20 10:42:18 PM : Getting Category Details
+Logged at 25-Jan-20 10:42:18 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:42:33 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:42:33 PM : Getting Category Details
+Logged at 25-Jan-20 10:42:33 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:42:37 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:42:38 PM : Getting Category Details
+Logged at 25-Jan-20 10:42:38 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:42:44 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:42:45 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:42:45 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:42:55 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:42:55 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:42:55 PM : Getting Category Details
+Logged at 25-Jan-20 10:42:58 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:43:09 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:43:09 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:43:09 PM : Getting Category Details
+Logged at 25-Jan-20 10:43:09 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:43:29 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:43:29 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:43:30 PM : Getting Category Details
+Logged at 25-Jan-20 10:43:33 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:43:56 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:43:56 PM : Getting Category Details
+Logged at 25-Jan-20 10:43:56 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:44:01 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:44:01 PM : Getting Category Details
+Logged at 25-Jan-20 10:44:01 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:44:11 PM : /Account/Post execution is about to start.
+Logged at 25-Jan-20 10:44:11 PM : Checking Login Details:Correct
+Logged at 25-Jan-20 10:44:11 PM : /Account/Post execution Completed.
+Logged at 25-Jan-20 10:44:19 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:44:20 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:44:20 PM : Getting Category Details
+Logged at 25-Jan-20 10:44:20 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:44:31 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:44:31 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:44:31 PM : Getting Category Details
+Logged at 25-Jan-20 10:44:31 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:44:45 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:44:45 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:44:45 PM : Getting Category Details
+Logged at 25-Jan-20 10:44:45 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:46:03 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:46:04 PM : Getting Category Details
+Logged at 25-Jan-20 10:46:04 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:46:10 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:46:11 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:46:11 PM : Getting Category Details
+Logged at 25-Jan-20 10:46:15 PM : /Category/Get execution Completed.
+Logged at 25-Jan-20 10:46:37 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:46:38 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:46:38 PM : Getting Category Details
+Logged at 25-Jan-20 10:49:28 PM : /Category/Get execution is about to start.
+Logged at 25-Jan-20 10:49:28 PM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 25-Jan-20 10:49:29 PM : Getting Category Details
+Logged at 25-Jan-20 10:49:29 PM : /Product/ProductsOfSpecCategory execution Completed.
+Logged at 26-Jan-20 10:43:03 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:43:07 AM : /Account/Post execution is about to start.
+Logged at 26-Jan-20 10:43:29 AM : /Account/Post execution is about to start.
+Logged at 26-Jan-20 10:43:30 AM : Getting Category Details
+Logged at 26-Jan-20 10:43:30 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:43:30 AM : Checking Login Details:Correct
+Logged at 26-Jan-20 10:43:30 AM : /Account/Post execution Completed.
+Logged at 26-Jan-20 10:44:54 AM : /Account/Post execution Completed.
+Logged at 26-Jan-20 10:45:12 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:45:13 AM : Getting Category Details
+Logged at 26-Jan-20 10:45:13 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:45:22 AM : /Account/Post execution is about to start.
+Logged at 26-Jan-20 10:45:22 AM : Checking Login Details:Correct
+Logged at 26-Jan-20 10:45:22 AM : /Account/Post execution Completed.
+Logged at 26-Jan-20 10:45:30 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:45:31 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:45:31 AM : Getting Category Details
+Logged at 26-Jan-20 10:45:33 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:45:42 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:45:42 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:45:42 AM : Getting Category Details
+Logged at 26-Jan-20 10:45:45 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:45:54 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:45:54 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:45:54 AM : Getting Category Details
+Logged at 26-Jan-20 10:45:54 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:46:22 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:46:22 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:46:22 AM : Getting Category Details
+Logged at 26-Jan-20 10:46:24 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:46:34 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:46:34 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:46:34 AM : Getting Category Details
+Logged at 26-Jan-20 10:47:02 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:47:02 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:47:07 AM : Getting Category Details
+Logged at 26-Jan-20 10:47:07 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:47:19 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:47:19 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:47:20 AM : Getting Category Details
+Logged at 26-Jan-20 10:47:23 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:47:31 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:47:31 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:47:31 AM : Getting Category Details
+Logged at 26-Jan-20 10:47:31 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:47:48 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:48:05 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:48:06 AM : Getting Category Details
+Logged at 26-Jan-20 10:48:06 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:48:09 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:48:09 AM : Getting Category Details
+Logged at 26-Jan-20 10:48:09 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:48:17 AM : /Account/Post execution is about to start.
+Logged at 26-Jan-20 10:48:17 AM : Checking Login Details:Correct
+Logged at 26-Jan-20 10:48:17 AM : /Account/Post execution Completed.
+Logged at 26-Jan-20 10:48:29 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:48:29 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:48:29 AM : Getting Category Details
+Logged at 26-Jan-20 10:48:34 AM : /Category/Get execution Completed.
+Logged at 26-Jan-20 10:48:42 AM : /Category/Get execution is about to start.
+Logged at 26-Jan-20 10:48:42 AM : /Product/ProductsOfSpecCategory execution is about to start.
+Logged at 26-Jan-20 10:48:43 AM : Getting Category Details

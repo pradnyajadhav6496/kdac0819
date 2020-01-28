@@ -1,0 +1,5 @@
+D:\Pradnya\workspace_msnet\Project_Solution\MyLoggerLib\bin\Debug\MyLoggerLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyLoggerLib\bin\Debug\MyLoggerLib.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\MyLoggerLib\obj\Debug\MyLoggerLib.csprojResolveAssemblyReference.cache
+D:\Pradnya\workspace_msnet\Project_Solution\MyLoggerLib\obj\Debug\MyLoggerLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyLoggerLib\obj\Debug\MyLoggerLib.pdb

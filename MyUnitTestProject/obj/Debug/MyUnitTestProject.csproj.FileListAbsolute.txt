@@ -1,0 +1,8 @@
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\bin\Debug\MyUnitTestProject.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\bin\Debug\MyUnitTestProject.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\bin\Debug\MySecurityLib.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\bin\Debug\MySecurityLib.pdb
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\obj\Debug\MyUnitTestProject.csprojResolveAssemblyReference.cache
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\obj\Debug\MyUnitTestProject.dll
+D:\Pradnya\workspace_msnet\Project_Solution\MyUnitTestProject\obj\Debug\MyUnitTestProject.pdb
